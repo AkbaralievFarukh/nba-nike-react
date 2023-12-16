@@ -15,12 +15,7 @@ import {getProducts} from "../../../Redux/Actions/ProductAction";
 import arrowRightIcon from '../../../Assets/Images/Icons/arrow-right.svg'
 import nbaNikeLogoWhite from '../../../Assets/Images/nba-nike-logo__white.png'
 
-const BestsellersSection = () => {
-    const dispatch = useDispatch();
-    const {products} = useSelector(state => state);
-    useEffect(() => {
-        dispatch(getProducts())
-    }, [dispatch]);
+const BestsellersSection = ({products}) => {
     return (
         <section className={'bestsellers-section'}>
             <div className="container">
