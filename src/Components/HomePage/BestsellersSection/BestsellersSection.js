@@ -1,6 +1,5 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './style.scss'
-import tShirt from '../../../Assets/Images/t-shirt.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -10,8 +9,18 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { FreeMode } from 'swiper/modules';
+import {useDispatch, useSelector} from "react-redux";
+import {getProducts} from "../../../Redux/Actions/ProductAction";
+
+import arrowRightIcon from '../../../Assets/Images/Icons/arrow-right.svg'
+import nbaNikeLogoWhite from '../../../Assets/Images/nba-nike-logo__white.png'
 
 const BestsellersSection = () => {
+    const dispatch = useDispatch();
+    const {products} = useSelector(state => state);
+    useEffect(() => {
+        dispatch(getProducts())
+    }, [dispatch]);
     return (
         <section className={'bestsellers-section'}>
             <div className="container">
@@ -27,22 +36,27 @@ const BestsellersSection = () => {
                         modules={[FreeMode]}
                         className="mySwiper"
                     >
-                        <SwiperSlide>
-                            <img src={tShirt} alt="t-shirt" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={tShirt} alt="t-shirt" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={tShirt} alt="t-shirt" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={tShirt} alt="t-shirt" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={tShirt} alt="t-shirt" />
-                        </SwiperSlide>
+                        {
+                            products.slice(0, 6).map((product, index) => {
+                                return (
+                                    <SwiperSlide key={index}>
+                                        <div className={'bestsellers-section__slider-item'}>
+                                            <img src={product.image} alt={'t-shirt'}/>
+                                            <div className={'bestsellers-section__slider-item-text'}>
+                                                <p className={'bestsellers-section__slider-item-title'}>{product.name}</p>
+                                                <p className={'bestsellers-section__slider-item-description'}>{product.description}</p>
+                                                <p className={'bestsellers-section__slider-item-price'}>${product.price}</p>
+                                            </div>
+                                        </div>
+                                    </SwiperSlide>
+                                )
+                            })
+                        }
                     </Swiper>
+                </div>
+                <div className={'bestsellers-section__action'}>
+                    <button className={'bestsellers-section__action-button'}>View all <img src={arrowRightIcon} alt={'arrow-icon'}/></button>
+                    <img src={nbaNikeLogoWhite} alt={'nba-nike-logo'} className={'bestsellers-section__action-logo'}/>
                 </div>
             </div>
         </section>
