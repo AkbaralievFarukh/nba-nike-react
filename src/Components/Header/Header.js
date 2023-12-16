@@ -4,7 +4,7 @@ import search from '../../Assets/Images/Search.png';
 import cart from '../../Assets/Images/Cart.png';
 import favorite from '../../Assets/Images/Favorite.png';
 import {Link} from "react-router-dom";
-import './Header.scss';
+import './style.scss';
 
 const Header = () => {
     return (

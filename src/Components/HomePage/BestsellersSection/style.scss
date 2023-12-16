@@ -1,0 +1,64 @@
+.bestsellers-section {
+  background: #000;
+  padding-top: 60px;
+  &__text {
+    color: #FFF;
+    font-family: Orbitron, 'sans-serif';
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 24px;
+    border-bottom: 3px solid #fff;
+  }
+  &__title {
+    color: #FB0223;
+    font-family: Orbitron, 'sans-serif';
+    font-size: 65px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-bottom: 3px solid #fff;
+  }
+  &__subtitle {
+    color: #FFF;
+    font-family: Orbitron, 'sans-serif';
+    font-size: 65px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-bottom: 3px solid #fff;
+  }
+  &__description {
+    color: #FFF;
+    font-family: Orbitron, 'sans-serif';
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 24px;
+    width: 454px;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
