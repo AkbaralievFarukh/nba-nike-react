@@ -41,7 +41,7 @@
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 24px;
-    width: 454px;
+    max-width: 454px;
   }
   &__cards {
     &-region {
@@ -104,7 +104,75 @@
       &30 { grid-area: 3 / 10 / 4 / 11; }
       &-image {
         height: 80px;
+        width: 80px;
         background: #C4C4C4;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .team-section {
+    &__cards {
+      &-card {
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .team-section {
+    &__cards {
+      &-card {
+        &-image {
+          height: 60px;
+          width: 60px;
+          background: #C4C4C4;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .team-section {
+    &__cards {
+      &-card {
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        &-image {
+          height: 30px;
+          width: 30px;
+          background: #C4C4C4;
+        }
+      }
+    }
+    &__title {
+      font-size: 40px;
+    }
+    &__subtitle {
+      font-size: 30px;
+    }
+    &__description {
+      font-size: 14px;
+    }
+    &__slider {
+      &-item {
+        &-title {
+          font-size: 16px;
+        }
+        &-description {
+          font-size: 12px;
+        }
+        &-price {
+          font-size: 16px;
+        }
+      }
+    }
+    &__action {
+      &-button {
+        font-size: 14px;
       }
     }
   }

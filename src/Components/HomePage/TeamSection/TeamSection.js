@@ -3,7 +3,6 @@ import './style.scss'
 
 const TeamSection = () => {
     const teams = Array.from({length: 30}, (_, index) => index + 1)
-    console.log(teams)
     return (
         <section className={'team-section'}>
             <div className="container">

@@ -106,3 +106,34 @@
   object-fit: cover;
 }
 
+@media (max-width: 425px) {
+  .kobe-section {
+    &__title {
+      font-size: 40px;
+    }
+    &__subtitle {
+      font-size: 30px;
+    }
+    &__description {
+      font-size: 14px;
+    }
+    &__slider {
+      &-item {
+        &-title {
+          font-size: 16px;
+        }
+        &-description {
+          font-size: 12px;
+        }
+        &-price {
+          font-size: 16px;
+        }
+      }
+    }
+    &__action {
+      &-button {
+        font-size: 14px;
+      }
+    }
+  }
+}

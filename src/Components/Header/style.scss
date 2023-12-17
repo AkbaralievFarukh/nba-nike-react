@@ -35,3 +35,19 @@
     }
   }
 }
+
+@media screen and (max-width: 425px) {
+  .header {
+    &-nav {
+      &__list {
+        gap: 14px;
+        &-item-link {
+          font-size: 12px;
+        }
+      }
+    }
+    &-actions {
+      display: none;
+    }
+  }
+}

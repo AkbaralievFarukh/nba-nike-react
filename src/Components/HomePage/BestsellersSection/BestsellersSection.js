@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './style.scss'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -9,8 +9,6 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { FreeMode } from 'swiper/modules';
-import {useDispatch, useSelector} from "react-redux";
-import {getProducts} from "../../../Redux/Actions/ProductAction";
 
 import arrowRightIcon from '../../../Assets/Images/Icons/arrow-right.svg'
 import nbaNikeLogoWhite from '../../../Assets/Images/nba-nike-logo__white.png'
