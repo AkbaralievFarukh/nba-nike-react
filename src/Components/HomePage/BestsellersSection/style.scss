@@ -138,3 +138,35 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .bestsellers-section {
+    &__title {
+      font-size: 30px;
+    }
+    &__subtitle {
+      font-size: 24px;
+    }
+    &__description {
+      font-size: 12px;
+    }
+    &__slider {
+      &-item {
+        &-title {
+          font-size: 14px;
+        }
+        &-description {
+          font-size: 10px;
+        }
+        &-price {
+          font-size: 14px;
+        }
+      }
+    }
+    &__action {
+      &-button {
+        font-size: 12px;
+      }
+    }
+  }
+}
