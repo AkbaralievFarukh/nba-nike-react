@@ -1,0 +1,73 @@
+.app-section {
+  padding-top: 60px;
+  padding-bottom: 93px;
+
+  &__text {
+    color: #000;
+    font-family: Orbitron, 'sans-serif';
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 24px;
+    border-bottom: 3px solid #000;
+  }
+
+  &__title {
+    color: #77D131;
+    font-family: Orbitron, 'sans-serif';
+    font-size: 65px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-bottom: 3px solid #000;
+  }
+
+  &__subtitle {
+    color: #000;
+    font-family: Orbitron, 'sans-serif';
+    font-size: 65px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-bottom: 3px solid #000;
+  }
+
+  &__description {
+    color: #000;
+    font-family: Orbitron, 'sans-serif';
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 24px;
+    max-width: 454px;
+  }
+  &__image {
+    margin-top: 28px;
+    width: 100%;
+    &-text {
+      margin-top: 16px;
+      color: #000;
+      font-family: Roboto, 'sans-serif';
+      font-size: 19px;
+      font-weight: 300;
+      &-description {
+        margin-top: 4px;
+        opacity: 0.5;
+      }
+    }
+  }
+  &__action {
+    margin-top: 74px;
+    &-button {
+      background: transparent;
+      color: #000;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: Roboto, 'sans-serif';
+      font-size: 19px;
+      font-weight: 300;
+    }
+  }
+}

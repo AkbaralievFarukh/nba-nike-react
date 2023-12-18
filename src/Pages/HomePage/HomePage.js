@@ -5,6 +5,7 @@ import TeamSection from "../../Components/HomePage/TeamSection/TeamSection";
 import {useDispatch, useSelector} from "react-redux";
 import {getProducts} from "../../Redux/Actions/ProductAction";
 import KobeSection from "../../Components/HomePage/KobeSection/KobeSection";
+import AppSection from "../../Components/HomePage/AppSection/AppSection";
 
 const HomePage = () => {
     const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const HomePage = () => {
             <BestsellersSection products={products} />
             <TeamSection />
             <KobeSection products={products} />
+            <AppSection />
         </main>
     );
 };
