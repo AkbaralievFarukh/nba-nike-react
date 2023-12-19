@@ -23,27 +23,12 @@ const Header = () => {
                     <ul className={'header-nav__list'}>
                         <li className={'header-nav__list-item'}>
                             <Link to={'/'} className={'header-nav__list-item-link'}>
-                                Man
+                                Home
                             </Link>
                         </li>
                         <li className={'header-nav__list-item'}>
-                            <Link to={'/'} className={'header-nav__list-item-link'}>
-                                Woman
-                            </Link>
-                        </li>
-                        <li className={'header-nav__list-item'}>
-                            <Link to={'/'} className={'header-nav__list-item-link'}>
-                                Jersey
-                            </Link>
-                        </li>
-                        <li className={'header-nav__list-item'}>
-                            <Link to={'/'} className={'header-nav__list-item-link'}>
-                                Teams
-                            </Link>
-                        </li>
-                        <li className={'header-nav__list-item'}>
-                            <Link to={'/'} className={'header-nav__list-item-link'}>
-                                App
+                            <Link to={'/admin'} className={'header-nav__list-item-link'}>
+                                Admin
                             </Link>
                         </li>
                     </ul>
