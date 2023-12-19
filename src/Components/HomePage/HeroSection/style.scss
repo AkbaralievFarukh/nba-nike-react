@@ -70,12 +70,26 @@
   .hero-section {
     &__title {
       font-size: 100px;
+      letter-spacing: 10.433px;
+
+    }
+    &__description-text {
+      font-size: 17px;
+      letter-spacing: 1.7px;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero-section {
+    &__title {
+      font-size: 76px;
+      letter-spacing: 7.667px;
+    }
+    &__description-text {
+      font-size: 14px;
+      letter-spacing: 1.4px;
+    }
     &__text {
       &-list {
         &-item {
@@ -90,10 +104,17 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 480px) {
   .hero-section {
     &__title {
-      font-size: 50px;
+      font-size: 80px;
+      letter-spacing: 8px;
+    }
+    &__text {
+      margin: 0 auto;
+    }
+    &__description-text {
+      text-align: center;
     }
   }
 }

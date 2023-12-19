@@ -35,19 +35,56 @@
     }
   }
 }
+.burger-menu-toggle {
+  display: none;
+}
 
-@media screen and (max-width: 425px) {
+@media (max-width: 480px) {
   .header {
+    &-logo {
+      text-align: center; // Логотип по центру
+      order: 2; // Порядок элемента внутри контейнера
+    }
     &-nav {
-      &__list {
-        gap: 14px;
-        &-item-link {
-          font-size: 12px;
-        }
-      }
+      display: none; // Скрываем навигацию на маленьких экранах
+      order: 1; // Порядок элемента внутри контейнера
     }
     &-actions {
-      display: none;
+      order: 3; // Порядок элемента внутри контейнера
+      & button:nth-child(1) {
+        display: none;
+      }
     }
+  }
+  .burger-menu-toggle {
+    display: block; // Показываем переключатель бургер-меню на маленьких экранах
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .burger-menu-open .header-nav,
+  .burger-menu-open .header-logo,
+  .burger-menu-open .header-actions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .burger-menu-open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .burger-menu-open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu-open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }
