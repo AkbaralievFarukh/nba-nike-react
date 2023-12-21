@@ -1,7 +1,6 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
 import HomePage from "../Pages/HomePage/HomePage";
-import Header from "../Components/Header/Header";
 import AdminPage from "../Pages/AdminPage/AdminPage";
 import Layout from "../Components/Layout/Layout";
 import {isAuth} from "../Lib/helper";

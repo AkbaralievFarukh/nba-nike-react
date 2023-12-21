@@ -9,7 +9,7 @@ import AppSection from "../../Components/HomePage/AppSection/AppSection";
 
 const HomePage = () => {
     const dispatch = useDispatch();
-    const products = useSelector(state => state.products);
+    const products = useSelector(state => state.products.products);
     useEffect(() => {
         dispatch(getProducts())
     }, [dispatch]);
